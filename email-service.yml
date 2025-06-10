@@ -1,0 +1,47 @@
+attachment:
+  invoice: path_to_file
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://service-registry:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      enabled: false
+      redis:
+        enabled: false
+  data:
+    mongodb:
+      uri: mongodb://root:example@emaildb:27017/lsa_email?authSource=admin
+  mail:
+    host: smtp.gmail.com
+    password: '{cipher}AQACeClIxwzPzjA8zg/X8F7kPM13/RX4qiEZV9DO4FpW2mUvSXFXuhius9BtLTORU52MjCWqoXad+XRkFK8y6VfABb/Vu96Usn0pT2ncqexokaLyHyjUCWBiWwPHQ105JMeq9wMmpoBDFtYDASh11RgBverLCoGYE4nOTdQ+IwwADYAnaQKLb7bZ5geeWIuYpBXlBl/9Efdp8VTqgofUYPzcKJXQo10naNWxgk4uvXWwb04F6APONRax9WCtwkpIvJNnkLeQddek3lylXn9Qx614yfyRA7/MKtgwJ1j4BFp7Id9kOu766Y5ikw2cgXrBmAPNz9CwjvVI68jyRb5vQMQ+fLORJErhxdBqBZaIPdYgoEdetgbX8Fjm38QuE1/IzzClb/OtAwNqgIIo7uMKQUBoOIuj7nlZBqgThnmkBAvCeAN1pbonYISnhwr87BpS2lw'
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    templates:
+      path: mail-templates
+    username: nelsontjohns@gmail.com
+  main:
+    web-application-type: none
+  security:
+    oauth2:
+      client:
+        provider:
+          okta:
+            token-uri: https://dev-78958050.okta.com/oauth2/default/v1/token
+        registration:
+          okta:
+            authorization-grant-type: client_credentials
+            client-id: '{cipher}AQDX7z+X2A4FtLA8H9gXPO+69+rdmwxWXSNMmL+8TVVvkeQWkeLaXfDEfCWSfRHW/fDSXvrCS+EWl5BsPbANWp2mSXLhB9jjCO5zVQHyleIRe6r9bgSds8YnNZ+EqQ3MC2ESorwzB3AOqf4erODXXuEfKca1cCi7TJGhsevvxYStsWJTU9Fhlq38HLHono9UALU1IbTkRSJ8vyPFEJaC80/EGt1bo0BE55zmBPgS0k44p5jV7491WB97wWzED8Vs44uZSQuaQqkjqDxh/lzb6QC2ImWzOxi3BmzQF4Oe+hXiI9wEzunKeMn+GOc55r+3OFUSM9Y8IGCaLiIvfgIiCvCmZHmiYcjkM/viQHsSyKS/nPrhp0R6R6ZJGcj7DL1E3zuOqfPNauX36hVj8y/oishn'
+            client-secret: '{cipher}AQDHhy48Q8i7DBbVkRSkz4JLVsxXhjcP0egRIQKmdljcFG0FKLj9ew7LSltswrhjsgRSWA1TF9ngPArij6Xv339XiosT8/V0QQRiuQM66UlanIAGdhQ0KRBNqsWTE374ry6ZBE8i72t1ZdkX9an8FM5HrAJV+vkk7P0tMe3fNNY0x1hQPugvpQeE9xgFl73UAEXbsFSsRJGmnrJ6nG3nsRYqin5zFCsMMIvHtWI6S0W04ugxa183hbr5kEHmzpt9OBQSrIU5/HdshoGH9uOvPf9pYH2Ftk3Dwf1nExTqaLG1TxtNhZYunVKlZjMl85SmzAObTY1FVZyL+djDjSCm7wDEMnGiVLRFx9MO3W3ayeIgFxO8y9mqBuL8i7xBQKHkTAmRP1D+3b7M4l7YJuRJ+ZmCoXWE2NWGe/YsB4C8oqxt/2pRkC9WNxAVUEQrxXSxqI+dSJCzGrcadQRo1+PWRNCp'
+            scope: email_client

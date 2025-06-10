@@ -1,0 +1,21 @@
+server:
+  port: 8761
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+      springframework.cloud.netflix.eureka: DEBUG
+eureka:
+  instance:
+    hostname: service-registry
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

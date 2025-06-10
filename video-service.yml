@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    gateway:
+      enabled: false
+      redis:
+        enabled: false
+  mustache:
+    check-template-location: false
+  codec:
+    multipart:
+      enabled: true
+      max-parts: -1
+      max-size: -1B
+okta:
+  oauth2:
+    issuer: '{cipher}AQAiUmqn7bPao2NvPMw5r1xHp7XTOINrn4GYLputYXtVPVhcg9af9MnElEjxO3bXu2OzNILQL6rn0LoxBGNvivn5jb46uTrAnzg64i3oGA9fWiXDmTTbpskOhANYSlCIZYhwkATsJv5hzkhsCSDTjnGJ3cJxVdM0bouwfRp7HPjpB+CtrpX9pShlL0V9Au2YHfSDeC/RrW0Fv37l9HoyEYFZXCLutGziI17Wv8p2lSuswhkS5Hy5dF7petQlkBHvLYvWoVu4ZFdtjURoiEuWDv2D2bgbfNzKwTZ8CEJLvX316VML7y7spJZ51NpVB02cP1SEnkLg05NlpvmMbNCCKtb2mthbtd/sIk/URXH+6YJizyobi/A607v4P9X0fJcEtM69+5oqrr8hEHZCyF12qUZ8k+1OyXayogtwYuyhBW6aUQ'
+    client-secret: '{cipher}AQCmD4TGNYqa6vsUiJxA7NDSHBhLT6G2jiB41RJzMIvu5z6Pm5gIdGDYNQHz1olfGUxsuFs802zSi/bU+dWXPegiU3ClJGYCa+Dn05TKXj61kWuy6xZr5wMNdfE6jh+z/Nk/QwWDQ+5Xm80EW5GopzrX80qO5ATDleL8cFilAWd6SyQ30WIvnr0NSF/vk7Dfz7sLiduMJccykFa6v69irQI/DTm0XKurFe0sFMVC68NuyfXdFmoWU0M0rxZYNc0339PZa8t0Frt5RpCYRu8oarxCuZaIpLvc/QJv7PdXj/VmCZzB3UfqlXkwN6l951g9deHYjnZnUFoWLtFlAduHsXgD1CU/vOQluWCoP92dVkaIsnnN7lpX5FQ6K9ypOldsj5cHlQG8/D9k7ub2BT1TfsuQ6R6MdjoJHXl3Lxq6hFp0jQ'
+    client-id: '{cipher}AQC3dW7xwTghXajEhebbM9pbE2YrHxcu/WruSiZOd9RT+ZwR8MmEOFDkH5lP2IK2lOgfXvNVz5f3hMnpoawwnX4382XeueuzEwh32H7om/dXU1NQOmk+VmaT0EpXvSzXsXiv5WDFiSUsKPc+IAe+dRkBQRm1GZN3AFtWYDoQ6B1sljfZ0BsfjkBjutV60Zm8MsI6lzPvgAhpdWF0zPFUmgLROM/VF2QVBhiziRMzkYGU4H/lqVx2FhOnKnqZ0/sd20bkag0MNsjLH0MfY0lbCoSSammO6EJh5ZEGheHYxausrW+sgrKnPT/7HzHH2iharJnswp+D5Suhu3LHo+YCVcfItwj2W65SWI/d1NVNNaas6kvM2zFIL7Uthqna85QS8ngTKmxs7Vg9cHmdofHnQcRj'
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: INFO
+google:
+  bucket:
+    name: '{cipher}AQBngFDUKv6wNbcvw80gD8W9XJ9aq2HAwGpY78BCyaTr8Cjq0toOM4kEJPd5Xru9KTrmEPunekuR7zrAXXaRRip3Iz1/qzS5gUdepdCxlAucctsAwy1K62zD75EGOBl/w7GbflOhokW4xsAq6m4C3PpLCa/XIiZZOnIutXwJGC8PdbN2LbYN3pFduvP7yHYdC/s5NPA9o+ss8ybvOLxdwGMb0hWuA47YPNAdGzpc0BF2oAawUJeEheBWBklhAek59Z98F2I4k0988tk4vh1aDBOeu3p52CMBJ+2jluzdbS8tESAXum3ajmkDY8diWEHuMCUl6cD4DtlQaocMkiA/jx3V+k15MK7wi6ZwtnQKXWDTdxIi1bhSHotZbsoWmVE+vWIU1yuJZAbTYz4EdM4i6XVo'
+  credentials:
+    path: '{cipher}AQDa4vLr5Kd/0n/uaxlqTN4NSADQU75zwqKo9RiHoz2ejBEEEp04o3J823RY4NuHGCyILz09rQi8pwMEqF/PVjHuzHaN9qKDixXHuxt2B6MsXfZt/RkMhFoYA5F70rQycsG0StHfB+IR741Xdm0SVMgZv/eRDyvm36FvL/XxbVFEJ/S+kuP2+mB0MhnEokNS5ZGnNhfmlIrEMUz+qvjddsZCCCwVyszMcJKRyGDfH32Wb84reILTcm4CIgMdTseM82Qu5Xf4qH0tHypg9uMPHYzpb+LczaRPoZBAqJ1cU0RbGTqzbKKYrXlsfezEj9+bX/KIluImyoiGrDMGnmd6qPuJL6mzkufQ33jxuhGGhCd2EkrVk748ZvYwAzMyOCZtyW1GqRPRmbIQ9LcUvxQo1qIuEqTJOX+9zbo7vg12lIO50AU1qnP8x3dv/vIlYvilSX8='
+  project:
+    id: '{cipher}AQBFF0m/cF35s0wITAa8ZNaNGpBVpwDacPDh6a5hmlG20WAGXmt5zkyFQHUvpX3V1bQzozn50LLJtihhFTaqht+5kD9RDicBq2TTopTHSQZLfx8f5AUvBbeeHp9UuThtAp6V/BF25MV0XqxhmPYWSUBMU79RUMqK+Eq0ab/AEP8tM3jSlDF/SQzxM9VB0mz07WvIbOCrC7Ns9yvH2rSeaKHNOJB6Z394htv6UxctCun1PbLVl5xEbDduUJ1z7P5/1CrjaIirZelISIONyf0do8mbCE5LH9gO66VtyirOKM1N3s4WdS1M+5gkCPYIH9AMDNZ86MQZD0g1sSyJcI/huGtrjgqBfcXnd2wqeaMaTjS1ici0RfrqGELdEJH/FifOjXrMZWvAt6RiNHfZ4+qawvAT'
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://service-registry:8761/eureka/

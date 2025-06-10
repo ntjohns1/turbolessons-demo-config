@@ -1,0 +1,26 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    enabled: false
+spring:
+  cloud:
+    gateway:
+      enabled: false
+      redis:
+        enabled: false
+      discovery:
+        enabled: false
+  mustache:
+    check-template-location: false
+okta:
+  oauth2:
+    issuer: '{cipher}AQBa0iaGOIdAPtYLn4cj3ABNrSkl32S3QeRGvMPKMc3JZigXQuxl7ud/i+068p8yL80m8PRysETPZlYhwljSZGbn0I8gCYPaSXMqZHGcv2rb6FV7H6ZMcyaosqvGFGh1bkR38swrCnOuAeB3NufGXFWwhOJADHcG3HLZ7Tq6bYySJ9apE6aZ3GwHXFoCAYJrpidfKRTWODqK7Oj04JE1Ks9HWcjUAG77xs8CdXX4Z5rw0YTqhpibVeLZQoyeDF6vEfPzrkuKWZVfuRTNQY8mq4Ef8X236m0MaVvK/NDWzCCrYrwTCmAx+6hL7WMlnYn3BgIBCLFmUKeuy2sNxW/dgMevh0YTMMgHzVwXmjAUN1GxZKBHrGdoCiIacnTaMOS0hUeSHtPOnJaAd2PHyk+iSC2NLkrwqQ8C4z+f8vwjYVcZMA'
+    client-secret: '{cipher}AQABHMgCvjoefBKJWt3Bca3c84PGwiWvkEjsPEHrUtDiTp3mU47HPru8SO0WObOaBy+oKDY65hScQ+7Bg3ohf3RjkwErDj1p/a/U7Ztm1mNTY0otY3ijmFilVk0pw2+ttjNAXQPTjrr1loaGCUPeq+lPSlXjambQea6nQOjnjOxJyJbbzFYztpBsq0D7U3MSQLHpPKbp3gaY9f7kukIyS+8YY6uMUCepcgOjpgCTzHBPKOM+oKNGv8wHmlBg+65lnlSEqSwAh8PeTmXZ7vRRbo0lFf/C85u9Jm/u/so28qV5HkJzhd8IQn+VxPGhrBi0tkZJ5MFTXhWP8I0439GfBmMEEFq/QATKzDSUsP/ZSX5VrGU3R/l/qoQm+BIWyj3KQoHRza6feh91bZy+qQc6hB2CfQ/joWNlQUs0Qr6sIzJauA'
+    client-id: '{cipher}AQCP9N4wQfqRuSn+s/Ay4MNR32JnyzPpx61ba1XKHym94wzqUsLhV+cCF8Ad/y2A4ARyu38Rh3uPFc3Hrzr2NDQfHovjuT5seePKPO845l8kdiMSq0uQW/O1kVkaY5w7ZsOniiXgOkfM+l8mMekW9Rf+MSj/R96NevSv1LI73szEXqLVYl9s39uf4ZMdZUqG++tBFoOekCiDyzAz8PcPRn5YReVY8io+02AyLDPQ7sMMGanibLqQLgXpifZ3RvcwFqGK/exaOhQEQH3TGcp6UMXmmg9+wqA5mqZ6yyjaRCcPmDV9lbywbnBvVOTbzaU+mHCYXIwbD/Tvo+DcEIeYXBycBN/rEM9/VbV/nplMQ9fMY5sjxYbPDLeXiX0gLq4uQsDQDn6IYgbY9iVcjq/vwP6e'
+  client:
+    token: '{cipher}AQBiGWqkKtLQfbs40Hd70YREOmTSvbNmojJNqUVQ/z2Kk0+je5qbrIdpspECYaogWq3TjQgdnt5mSbWoHz7zMebAh+rKHeIp+IeKyzJySnu12uuftdu6Q9Zi0uDKZdcA6aekb/8cZpZQ+fybR1fPT+MvE6L3Q3o0s2IvUU14d47eQEMEzkeC8YtV8Fw+MMy3sNX6rAKF3X1SgqAasPnolrk11qdbfUKB39oz0QBaoqRfODZxpVHGHBnIXSchDoYPrH0RuIWHHhWxyh9ZI27ydjr2yn/x7BLvoBjyNXXDbG/romqu7L3B+P2IHtq4lBqE/C8JrjROCS5fy4uImzm5mbjT4P+NwNaQOHUO7Pr42o97y5oAIxjf1zjgIVBSxYhn9f3gisrZAzvx+1unEY08TTWvvZwIkvWTc7L5WFqH/RGOtw'
+    orgUrl: '{cipher}AQBfikJknrnsGUyClFoECx3pHjUd57KoxwVD7gtWx/7xT/LiIB/Pn3TSai6U7boYL42+m0luUIgizFi3TUruCbF7w+Rmd/AM4GD18u6gIrhW1hA70EKv90M5bJ4qcKEff7O8+VJVwWwpKZgL/Xii/8uaE4IkkIS3XVZQ267mTxb+l4VWh7htp/4oCFU9BYKuy+39/kf+zFf3KQHBIophFS/+0hiHzaTjGQ6q5f2JePSns4xpuN/EoIkrLeQzirxxWjfbFZvnUz1XRXttnlq50C4aWNWuA+GaUn+YorhqUst0mNV7Bm0kEv6aZOVb87eAS+2x9Wl49uPyhqAFYXwRUz6NJKfa8lngo+ls64MVVrn951u/gr0/Z4mwjcOpxWnPU+ZrGKLxnsHGR9OGRjm6hD0j'

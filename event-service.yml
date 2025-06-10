@@ -1,0 +1,31 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://service-registry:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      enabled: false
+      redis:
+        enabled: false
+  datasource:
+    password: '{cipher}AQBkCNRY/0nNk9wohhJx5HLuxIuGE7sPdBrv2OJR13LRk0aBHWXTcsIlqlQTn9mHI8MQ2VhYNjht7pW570Y1Qkq2s/jSCF5WXpb8Io3n2UHagDrV9TsVYNS80qE+7sx15TDY7pCt00L6+nPgcPT7ALQq7eDbLHPh6USbwJ6kBy1DzzyenCqWlC25rhqv/BITRlGBvlgDFMCTSwnnU42bwV+80h10bQTgHkoEcYLVQymI2lDEbNHG/KhzYvJNkRiYufc7/CCrDHaALzPEQa/XC8rBOK2EOnCPKG0zfAKH/0rnnQHJR8/XSMSJFHEr3E+08i4VHqKnBONYH631A8vLLN1H+f4RzrJMdbrgBZCveXfYciPYvnbmoEZ7UaQPwhuE6jeoPg9UwtTtl3cL4TNyj0dP'
+    url: jdbc:mysql://lessondb:3306/eventplt?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: '{cipher}AQByaX2G2CYghe9gzVBustEH1vpmb5eChcI0QEYKIcwv0g3HFUtD/NsJ/6W6/hj8UDMJ5x2lUi3tjZKRsMECKvFPMXJ37j+MBcO2GfgnCbkRnrTt5lftRPgeDyd0CG/TN+yqO9UvGgr2x/cLzMgxP3VXoDZ5BrXoKz/rPihAm6/4GkqgNdFOqviUogN4vjN64ri6z2w2dms1oDdimtU48KsPZxYThendkMFQ+doRjMzxGA2+bOfERizMOnTzjCBLhgnuved6Ahv6Dt1zGHY354x7T1Nef0FDlPFUWoRjaibz8FxQg2Hindchbm5UtdECKpKzbjqUO9m6enrTBPd/xAUHFvFbwj2P9c47vjCbxLA2A7KPHqoVZis90KL4bROOOcg'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+  mustache:
+    check-template-location: false
+okta:
+  oauth2:
+    issuer: '{cipher}AQAhD9hxwdssoLNQpCFCc+y5T2OFsRxNmxOk1DujZ9xjafif8VFNTDTI6bzBZ+sCt5q/Ou8EEkC+kWXPDNkHE28N7g5Vnb1C5PZRdBLO+f7y39hvAaonLclWkXhshfmLWQBRv4iqFSyza/d+1c7B/9s2uaC1OUIVkq0kpuyV+uXgPtHi1faH68WkDaEQQTkKz9NccuFzjhnUby7UHVON1KnMS2CLCIfJmywuDeXXky+KvgPCdwjWM73xRvPow/8RbsfGcjYnFyI+7CpAUyR8W9wt+HdwM7HjrZAXXc5+EM8ek68MdSqIS8OWntu0+AnyYOCHgblqKtZApk3nuJrf8WFa4vDkg4FU8rHO2UWa/kauaZy4xqksH8eEu/F8bTHtkj1KDKc4BOzbgnXbpVMfdkswLqS6oYrTPXKH2qgndfVZFw'
+    client-secret: '{cipher}AQDGoXi5BpaJ8tjlgUakjXaJwNGIA5sSoXF7aiaOkbK32KPWI9IyG+E1+B1wAkqLz0yHagzegcFSZUmS3p+LEnTfXJ5FbmOEVLMvEg5Kgyg7j7SHmfP0lTQNKg15O2XajO1AHBwhEIBrJ7h9Q7jUbGWGh2ddssPF350o4Rqc/Io3Ak1Y0xo08F26rAo+sCwbQguJKr61hHUo7wwJAArnqcLC2KztmoLw837CwAHm9/O0PIh2juc3VpZsMWSQL1UT2gl3dNfQdRzwDD3svf4QDa/3XyhnnUwKFLNUflRCUJmyihXKXlSOGEZpoeBcb3o8b94dzKx8sGWvMT+4oCZOHvBYADYTZFKsrfAiEZocgxVxtAhlbXi4dv/qIvRICN8EPhDMO8xsA0NiDq0XbrJu/Sm3KDUuozSrcB2SSVtHfqVu3g'
+    client-id: '{cipher}AQC6esFAAJrh4S/bXqEjGyxfm6WCcbooIx7jGVkzvdpqmkKnGpYMAcyYDkHfg2DcqgNpUN8dfCz7W1Z0TTXDOBuPWSNcNdn21O4Axt6MIXAhjuIj2NO8bIEI57gse0ysxjVSIVgu0KsgeHbbymDauk9qvrVFHJrOJEpccVS6RO6henKa6caLg483HGcEr76IJSvuBmzzmTAYAnsRjxgmngwioObFVC2VbXsGmPZkhHYZ+rmzsXCugnOE12Xlf6OtE00WRBzWrVcpDi7Ck6Z931puUpdOVFN8eY3M9d32poBYPPspMzJj0yThnKZ/n4MMpcPklMjXrYyuMGp+IU2avJKNHBtjf7MKtL8RRI+KMRE3OAuxcu5QwBV9R3Rz7AYDhnLnsZchVWn7LJChAK5Ta/hQ'
+

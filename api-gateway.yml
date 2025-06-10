@@ -1,0 +1,56 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: event-service
+          uri: lb://event-service
+          predicates:
+            - Path=/api/lessons/**
+          filters:
+            - TokenRelay=
+        - id: admin-service
+          uri: lb://admin-service
+          predicates:
+            - Path=/api/users/**, /api/users
+          filters:
+            - TokenRelay=
+        - id: message-service
+          uri: lb://message-service
+          predicates:
+            - Path=/api/messages/**, /ws/messages/**
+          filters:
+            - TokenRelay=
+        - id: email-service
+          uri: lb://email-service
+          predicates:
+            - Path=/api/email/**
+          filters:
+            - TokenRelay=
+        - id: video-service
+          uri: lb://video-service
+          predicates:
+            - Path=/api/video/**, /api/video
+          filters:
+            - TokenRelay=
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/payments/**, /api/payments
+          filters:
+            - TokenRelay=
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI}
+    healthcheck:
+      enabled: true
+okta:
+  oauth2:
+    issuer: '{cipher}AQCtWLdFhK3tPHK5WqhVcTzTZ0+im/Nwte7RTEI0v+r1vHm1Wx0OJ9B3cFGZlV2NAF7mt3DfqTgipG88kVa84T341VBMr5FUehGjHDSXKtBhvUErMeMb+53XD10jro8k9q/ukzB6CCZtRJj3x3YH2qRWClgv6UzAMu7NEAIvDxqyFNVHVkBP3CfLOHtUIeLL0t5Yqqu/p8gAqQYHhNSAlU0ykIjH3vo+PlCj9ov7bICkmKrKM9YGvbBuQWtfmdU3AmKhgqDIW/T2BLaPhp+FKEogeNDi38/tO556V1Y9+16qoDFfjmzC+zA3IOzTutZL1t/9VcucHa40+If6onfED+2s+dx0dqmmZho92VVD1jK1xbzVLh3nZBpqBey5lMZI7D3sDidhxSd00HO1hU/gzdLPk0iaJYA/dU/HRJNspURb/g'
+    client-secret: '{cipher}AQAkQ7cVK7pB77mbV07QLILIO3HlYVLpmTUZqK0PzX1jri1TMt7+4atyD5Mp0+3ILkMpQGVBQ6dfhYiNVhrrUPW3zACTvSt4QzulrWyF/Oie9tdYuMWNZafDIywAk13b8tpgO1dbg11kampYq2P153N/s8kZoew6y2TXYlgOEFzCjdFWgyWH7YWC89ZturHdr3Fh8QUoWwIXvwKjMUKNTflNjKJ5s0F0cCq4sftMIpGeWAnFHIql10YbYjci3Wbcpr8iiEn5xRdq/2/EDKytaX6t9LeFEd+9zgnrJxsJ0O+8jlZXOSYXZIhz7QDQTzdBhrL+O8NCu9dfp9nh0fYrjo4NP8yiSb18ayftIzaPf4IoSU60G28qHM/E5YnDKc+uRWFYnP6vNwOC8doJTXre8W07hZn9AiJEyIqInAQndh+BXQ'
+    client-id: '{cipher}AQC6+a2LYPg34KMjDkF8iDDsJFMuduadVnPkPLf3CIB9PDBCCcJoHHn5LgKcaRI8ddG7idyC27NVirTmZ2fbTuYb+BN1UIKyXj0onf8Vu9gtGAlOLXkqhi1zUFPBtfpqHESgsWQtx9/1K6fb7PL9zFcBaUisw1pd8ZL046Qur1fbT8P6PFzDMj5iWQ6Oc/pSGFn+l/hGRlk3m6izAHL0CHT+TfeUSKkxQaxkeM22yhpo4Fure1kliIryKAikceVtZdMvMxOcPKtA60iZ+wMqHsfmunz3kwuHS7nm4FOguyVnAHvMgb+mm7a9i96dDLlURlgQimlHSPBq74EuRm071GL+MPoA3ClojXhJmllrBigVDFJTdPHbZv5z1AkYS5uRjygSFM0k1jRT570yeA0Mc0al'
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: INFO
