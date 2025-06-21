@@ -32,23 +32,6 @@ spring:
   jackson:
     mapper:
       propagate-transient-marker: true
-  security:
-    oauth2:
-      client:
-        provider:
-          okta:
-            token-uri: https://dev-78958050.okta.com/oauth2/default/v1/token
-        registration:
-          okta:
-            authorization-grant-type: client_credentials
-            client-id: '{cipher}AQCmE7LDfY+dyny3rJWHq+nj9xeYg3EHsbF+V9L+sodazeU1DBeHnXnpD4kbQ9oAObRVowkmhNc8wTpcHS8fCEAw51McD1ApiNLgmfHvEhIjaHUrHcQLe5kDPBfx8VqbjHwABFl+nJRebNd4KUiF9waCmkqE7DMmrq1g5SMGL5+VhsiMsA2+pg/ci5AJgxbuu1nkf+hcJ/CpIB94AGem4snX8FenSLlpDLq3f98BrlfMyZpAUlz7Vxn3+TkATY3idE5bf27lUIUDCLjNf108ZeoE2QUVju5OR7ABaTmkmuCCDpAfTSHcxb8Ygt8qSkB8C/Opz/6Ds15zIRKHGQ/rCFpTkE/cuOnkHkz2bDTBGGDq/ohDiHe+CYLJ37V64gmCBukwhWJPjWnXbai//oRNVH+B'
-            client-secret: '{cipher}AQC519ZoHIk667YQ/6Lh1BZL0AxlaK3sX6q5hcc43Ks2/N+crRdkj/RrFL5sRpwJWVZDGcHpJ5uToLVFg2XGBvMSRDRiMuz9iDAtJA9sqaCsNhBh6jKR8Ge8goLylMLcMeUM48VVDG0DvwMLxTqDCB4ePIa3CuTJ6GIT6I7ji3P4UokcIpNW36ODGemYwZPdnIurvdjLhlJ5YzM5kGfR76H/APEkAHAAKgVRHKUo+jjzUHpDcS2Jz6XTaMJSkm8BZiV7MFu2l7pzqEmxreSojo+smus1tIMLQoqO5SdBAj/CF+IYugSB8aYOAZGYqtmqHU7MAJtuXEs5/ZFh63DeAjxyWdjIkMk/pFNKxBDMqStcVf6ILUvUvZyTkj6JQAu/rtuWbTxAotMCDSW+Cyi2ajulTPZkQXvX2knQZzvq0YZvpEL6YXkz7OTWLXy778c++e6Q+zjzb7XLvbgrq/xiPZzS'
-            scope: stripe_client
-okta:
-  oauth2:
-    issuer: '{cipher}AQAhD9hxwdssoLNQpCFCc+y5T2OFsRxNmxOk1DujZ9xjafif8VFNTDTI6bzBZ+sCt5q/Ou8EEkC+kWXPDNkHE28N7g5Vnb1C5PZRdBLO+f7y39hvAaonLclWkXhshfmLWQBRv4iqFSyza/d+1c7B/9s2uaC1OUIVkq0kpuyV+uXgPtHi1faH68WkDaEQQTkKz9NccuFzjhnUby7UHVON1KnMS2CLCIfJmywuDeXXky+KvgPCdwjWM73xRvPow/8RbsfGcjYnFyI+7CpAUyR8W9wt+HdwM7HjrZAXXc5+EM8ek68MdSqIS8OWntu0+AnyYOCHgblqKtZApk3nuJrf8WFa4vDkg4FU8rHO2UWa/kauaZy4xqksH8eEu/F8bTHtkj1KDKc4BOzbgnXbpVMfdkswLqS6oYrTPXKH2qgndfVZFw'
-    client-secret: '{cipher}AQDGoXi5BpaJ8tjlgUakjXaJwNGIA5sSoXF7aiaOkbK32KPWI9IyG+E1+B1wAkqLz0yHagzegcFSZUmS3p+LEnTfXJ5FbmOEVLMvEg5Kgyg7j7SHmfP0lTQNKg15O2XajO1AHBwhEIBrJ7h9Q7jUbGWGh2ddssPF350o4Rqc/Io3Ak1Y0xo08F26rAo+sCwbQguJKr61hHUo7wwJAArnqcLC2KztmoLw837CwAHm9/O0PIh2juc3VpZsMWSQL1UT2gl3dNfQdRzwDD3svf4QDa/3XyhnnUwKFLNUflRCUJmyihXKXlSOGEZpoeBcb3o8b94dzKx8sGWvMT+4oCZOHvBYADYTZFKsrfAiEZocgxVxtAhlbXi4dv/qIvRICN8EPhDMO8xsA0NiDq0XbrJu/Sm3KDUuozSrcB2SSVtHfqVu3g'
-    client-id: '{cipher}AQC6esFAAJrh4S/bXqEjGyxfm6WCcbooIx7jGVkzvdpqmkKnGpYMAcyYDkHfg2DcqgNpUN8dfCz7W1Z0TTXDOBuPWSNcNdn21O4Axt6MIXAhjuIj2NO8bIEI57gse0ysxjVSIVgu0KsgeHbbymDauk9qvrVFHJrOJEpccVS6RO6henKa6caLg483HGcEr76IJSvuBmzzmTAYAnsRjxgmngwioObFVC2VbXsGmPZkhHYZ+rmzsXCugnOE12Xlf6OtE00WRBzWrVcpDi7Ck6Z931puUpdOVFN8eY3M9d32poBYPPspMzJj0yThnKZ/n4MMpcPklMjXrYyuMGp+IU2avJKNHBtjf7MKtL8RRI+KMRE3OAuxcu5QwBV9R3Rz7AYDhnLnsZchVWn7LJChAK5Ta/hQ'
 STRIPE_PUBLIC_KEY: '{cipher}AQCl3gZrJFsmn9my2TylvNd1ARdJp66l+qus6TZppHrZgPUn9WqXDYpGGa56Y++v2VOpJSclx2aoxJ5nxqvIYG57VGrklNuSENHTnly5vO9ZkITyLi5f8qzHOs1Aa/pM6Bzsq8nye4L7azd81VNcGumDRKwlVW4pw7d3qRYov8mcSl08Lttlp5+h27ufh+Pi50HK8E1O0rdFqPQZrr/nO2ppwVDwR14G7prcM4w7ymg6XrSp3jYFppbl7O7xrcKIP5b9zPhTbfEfa+MqNb+HlTIJgtsXQYz+mjjZlC3urJyPyNgeLU4+oq7BfYEPa5G5bL8Dx35Vw2EWUWB91LWsFU2euaxtxopo/cBp/RAOFMFYhluLahApRN+HRuRF/wOO+53P+xG3xbTx4XH0Cn57c5SJFEKSZY8jgbODiwe9+mPQppKfON2f/pJK08kueYH7r7LHsSZEcekyfmqNdheUEQn7heqcPxX8AnGtnwysExkF6wVs47JZXpSpvKA/10O76qU='
 STRIPE_SECRET_KEY: '{cipher}AQCTguRl+1yIPqa/255O/siXb0BwuNS6FOjcBpOAKxEVzSNpuJLe5Wd1AORCjrdXUBTRfo1ZZVErR9i+kfoUqwoPAKcLc1HN8EO1u7eRzW1JwGg61vgr2MlF8P7r4cwRY+aMtqnY05q+0yqOOEOL5OZR4yCxMH4DSlSmr1ZfCSFMnOB2D+ilFBMtT4RLrg4XSpBl+/NVEQhNQfZRss38C7tvun7OB7KAibY80IaUZcueSbAAHnfFCgLZBTQgMSKhtYcy5Q/m0jsUujSAWV+Dt3mhqGpE03oX/L79JLm7CRcftN6m60j4EKcVUgZYY8pr2XkeAMxPUSOjDDYNdrtbaF0O4EyoDBmbbLRqEI86d5b9yzrZVXMLmOl9vqb1FtFAsszgcQabRHYHlAqwUQX/ljt33hZVm0uT9YY438frxaodKsAho/5U9+yiUN0KsnxtYjnMAJwKeFQJBDLwzlRQC7u9o0YQ2/Xuj6Fa3vd6wDNU0XSUcVmvwVrv/exi/Tj2Tyo='
 
