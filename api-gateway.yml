@@ -5,27 +5,27 @@ spring:
         - id: event-service
           uri: lb://event-service
           predicates:
-            - Path=/api/lessons/**
+            - Path=/api/lessons/**, /api/lessons/swagger-ui.html, /api/lessons/v3/api-docs/**
         - id: admin-service
           uri: lb://admin-service
           predicates:
-            - Path=/api/users/**, /api/users
+            - Path=/api/users/**, /api/users, /api/users/swagger-ui.html, /api/users/v3/api-docs/**
         - id: message-service
           uri: lb://message-service
           predicates:
-            - Path=/api/messages/**, /ws/messages/**
+            - Path=/api/messages/**, /ws/messages/**, /api/messages/swagger-ui.html, /api/messages/v3/api-docs/**
         - id: email-service
           uri: lb://email-service
           predicates:
-            - Path=/api/email/**
+            - Path=/api/email/**, /api/email/swagger-ui.html, /api/email/v3/api-docs/**
         - id: video-service
           uri: lb://video-service
           predicates:
-            - Path=/api/video/**, /api/video
+            - Path=/api/video/**, /api/video, /api/video/swagger-ui.html, /api/video/v3/api-docs/**
         - id: payment-service
           uri: lb://payment-service
           predicates:
-            - Path=/api/payments/**, /api/payments
+            - Path=/api/payments/**, /api/payments, /api/payments/swagger-ui.html, /api/payments/v3/api-docs/**
 eureka:
   client:
     serviceUrl:
